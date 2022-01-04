@@ -1,0 +1,498 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: sticky;
+    top: 20px;
+    z-index: 50;
+    transition: 0.1s ease-in-out;
+    
+}
+
+header.active{
+    background-color: black;
+    height: 70px;
+    top: 0px;
+    box-shadow: 5px 8px 8px -6px rgba(0,0,0,0.5);
+}
+
+.logo h1, .log_in h1{
+    font-size: 1rem;
+    font-weight: bold;
+    /* padding-top: 35px; */
+    color: rgb(17, 0, 255);
+    position: relative;
+}
+
+.logo h1{
+    padding-left: 50px;
+}
+
+.log_in h1{
+    /* margin-top: 20px; */
+    background-color: rgb(17, 0, 255);
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+
+.logo h1::before{
+    position: absolute;
+    /* top: 32px; */
+    left: 5px;
+    right: 0;
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(17, 0, 255);
+    z-index: -1;
+}
+
+/* ****************** hero section ************************ */
+.hero_section{
+    margin-top: -50px;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-image: url("../Image/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.5);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.hero_section::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+.hero_text{
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.hero_text h1{
+    font-size: 2.50rem;
+    line-height: 45px;
+}
+
+.hero_text p{
+    font-size: 1rem;
+    color: #afaaaa;
+    margin: 20px 0;
+}
+
+.hero_text button{
+    width: 300px;
+    padding: 14px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(0, 60, 255);
+    color: #FFFFFF;
+}
+
+
+/* ***************** self paced section ********************** */
+.self_paced{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.bgImg{
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url("../Image/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    z-index: 1;
+    color: #FFFFFF;
+}
+
+.bgImg::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.678);
+    z-index: -1;
+}
+
+.self_col{
+    width: 600px;
+    margin: 150px 5px 50px 5px;
+}
+
+.self_col h1{
+    font-size: 2.50rem;
+}
+
+.self_col h2{
+    font-size: 1rem;
+    color: #3f3e3e;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.self_col p{
+    line-height: 30px;
+}
+
+
+/* ****************** rounded_circle **************************** */
+.rounded_circle{
+    width: 72%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rounded_row{
+    margin: 120px 10px 50px 10px;
+    text-align: left;
+}
+
+.icon{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.icon i{
+    font-size: 1.20rem;
+    color: #FFFFFF;
+    margin-left: 25px;
+}
+
+.icon::before{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: rgb(17, 0, 255);
+    z-index: -1;
+}
+
+.rounded_row h1{
+    margin-bottom: 25px;
+}
+
+.rounded_row p{
+    line-height: 25px;
+}
+
+
+/* ***************** container_card *********************** */
+
+.container_card{
+    width: 72%;
+    margin: 200px auto 50px auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container_card_row{
+    margin: 10px 15px;
+}
+
+.container_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_content img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h1{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card p{
+    line-height: 25px;
+    font-size: 14px;
+}
+
+
+/* ******************** footer *********************** */
+.footer{
+    margin-top: 150px;
+    width: 100%;
+    background-color: rgb(195, 195, 195);
+    padding: 50px 25px;
+}
+
+.footer_row{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.footer_col{
+    flex: 1 1 200px;
+    margin: 10px 10px;
+    position: relative;
+}
+
+.footer_col h1{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer_col span{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 30px;
+    color: rgb(17, 0, 255);
+}
+
+.logoName{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(17, 0, 255);
+    border-radius: 50%;
+    top: -5px;
+    left: 0px;
+}
+
+.footer_col ul li{
+    list-style: none;
+    line-height: 35px;
+}
+
+.footer_col ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.footer_col ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer_text p{
+    line-height: 35px;
+    position: relative;
+}
+
+.footer_col i{
+    margin: 5px 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(17, 0, 255);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.20rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.footer_col i:hover{
+    background-color: rgb(1, 0, 10);
+}
+
+.privicy_policy{
+    margin-top: 25px;
+    width: 100%;
+}
+
+.policy_row ul{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.policy_row ul li{
+    list-style: none;
+}
+
+.policy_row ul li a{
+    text-decoration: none;
+    margin: 5px 10px;
+    color: #686868;
+}
+
+.policy_row ul li a:hover{
+    text-decoration: underline;
+}
+
+.policy_col{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.policy_text{
+    flex: 1 1 200px;
+    margin: 15px 10px 0 10px;
+    color: #4d4d4d;
+    font-size: 14px;
+}
+
+
+/* ********************* media query ************************ */
+@media screen and (max-width: 1261px){
+    .self_col{
+        width: 100%;
+        padding: 0 35px;
+    }
+
+    .rounded_circle{
+        width: 95%;
+    }
+    
+    .container_card{
+        width: 95%;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .self_col{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .container_card{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .self_col{
+        width: 95%;
+        padding: 0 10px;
+    }
+
+    .rounded_circle{
+        margin: 100px auto 10px auto;
+        grid-template-columns: auto auto;
+    }
+    
+    .rounded_row{
+        margin: 12px 10px 50px 10px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .hero_text{
+        width: 95%;
+    }
+
+    .hero_text h1{
+        font-size: 2rem;
+    }
+
+    .self_paced{
+        margin-top: 100px;
+        grid-template-columns: auto;
+    }
+
+    .self_col{
+        margin: 10px;
+    }
+
+    
+    .rounded_circle{
+        width: 95%;
+        grid-template-columns: auto;
+    }
+
+    .rounded_row{
+        margin: 12px 0px 50px 0px;
+    }
+
+    .container_card{
+        grid-template-columns: auto;
+    }
+
+    .container_card_row{
+        margin: 10px 0px;
+    }
+    
+    .container_content{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .container_content img{
+        width: 100%;
+        height: 200px;
+    }
+
+    .policy_text{
+        margin: 15px 5px 0 5px;
+        text-align: center;
+    }
+}
